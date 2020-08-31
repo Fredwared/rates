@@ -1,0 +1,19 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Rates API",
+        "description": "Rates API description",
+        "contact": {
+            "email": "fredwared@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "host": "http://my-default-host.com",
+    "basePath": "/api/",
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "paths": {},
+    "definitions": {}
+}
