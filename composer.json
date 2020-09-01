@@ -13,7 +13,9 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
-        "zircote/swagger-php": "2.*"
+        "predis/predis": "^1.1",
+        "zircote/swagger-php": "2.*",
+        "ashallendesign/laravel-exchange-rates": "2.2.*"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

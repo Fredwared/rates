@@ -8,12 +8,72 @@
         },
         "version": "1.0.0"
     },
-    "host": "http://my-default-host.com",
+    "host": "localhost",
     "basePath": "/api/",
     "schemes": [
         "http",
         "https"
     ],
-    "paths": {},
+    "paths": {
+        "/exchange-currencies": {
+            "get": {
+                "tags": [
+                    "\u0414\u043e\u0441\u0442\u0443\u043f\u043d\u044b\u0435 \u0432\u0430\u043b\u044e\u0442\u044b"
+                ],
+                "summary": "\u0421\u043f\u0438\u0441\u043e\u043a \u0434\u043e\u0441\u0442\u0443\u043f\u043d\u044b\u0445 \u0432\u0430\u043b\u044e\u0442",
+                "description": "",
+                "operationId": "RatesController@index",
+                "responses": {
+                    "200": {
+                        "description": "[json]"
+                    }
+                }
+            }
+        },
+        "/exchange-rates": {
+            "get": {
+                "tags": [
+                    "\u0422\u0435\u043a\u0443\u0449\u0438\u0435 \u043a\u0443\u0440\u0441\u044b \u0443\u043a\u0430\u0437\u0430\u043d\u043d\u043e\u0439 \u0432\u0430\u043b\u044e\u0442\u044b"
+                ],
+                "summary": "\u0422\u0435\u043a\u0443\u0449\u0438\u0435 \u043a\u0443\u0440\u0441\u044b \u0443\u043a\u0430\u0437\u0430\u043d\u043d\u043e\u0439 \u0432\u0430\u043b\u044e\u0442\u044b",
+                "description": "",
+                "operationId": "RatesController@getRate",
+                "parameters": [
+                    {
+                        "name": "rateOf",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "to",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "[json]"
+                    }
+                }
+            }
+        },
+        "/exchange-rates/history": {
+            "get": {
+                "tags": [
+                    "\u0418\u0441\u0442\u043e\u0440\u0438\u044f \u0438\u0437\u043c\u0438\u043d\u0435\u043d\u0438\u0435 \u0446\u0435\u043d"
+                ],
+                "summary": "\u0418\u0441\u0442\u043e\u0440\u0438\u044f \u0438\u0437\u043c\u0438\u043d\u0435\u043d\u0438\u0435 \u0446\u0435\u043d",
+                "description": "",
+                "operationId": "RatesController@history",
+                "responses": {
+                    "200": {
+                        "description": "[json]"
+                    }
+                }
+            }
+        }
+    },
     "definitions": {}
 }
