@@ -13,6 +13,8 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['namespace' => 'Api'], function (){
+    Route::get('exchange-currencies', 'RatesController@index');
+    Route::get('exchange-rates', 'RatesController@getRate');
+    Route::get('exchange-rates/history', 'RatesController@history');
 });
